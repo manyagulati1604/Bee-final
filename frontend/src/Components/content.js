@@ -15,7 +15,7 @@ const Content = () => {
           return;
         }
     try {
-      let result = await fetch('http://localhost:9000/teachers',{
+      let result = await fetch('https://bee-final-backend.onrender.com/teachers',{
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

@@ -21,7 +21,7 @@ const ParticularContent = ()=>{
         }
 
     const getData = async()=>{
-        let result = await fetch(`http://localhost:9000/get/${params.mail}`,{
+        let result = await fetch(`https://bee-final-backend.onrender.com/get/${params.mail}`,{
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',

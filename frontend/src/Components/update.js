@@ -27,7 +27,7 @@ const UpdateTeacher = () => {
         }
 
         try {
-            let result = await fetch(`http://localhost:9000/teacher/${mail}`, {
+            let result = await fetch(`https://bee-final-backend.onrender.com/teacher/${mail}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const UpdateTeacher = () => {
         }
 
         try {
-            let result = await fetch(`http://localhost:9000/teacher/${mail}`, {
+            let result = await fetch(`https://bee-final-backend.onrender.com/teacher/${mail}`, {
                 method: 'PUT',
                 body: JSON.stringify({ name, age, address, department }),
                 headers: {

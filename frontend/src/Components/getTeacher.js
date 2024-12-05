@@ -19,7 +19,7 @@ const GetTeacher = () => {
         }
 
         try {
-            let request = await fetch(`http://localhost:9000/teacher/${mail}`, { 
+            let request = await fetch(`https://bee-final-backend.onrender.com/teacher/${mail}`, { 
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

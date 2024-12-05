@@ -16,7 +16,7 @@ const DeleteTeacher = () => {
             return;
         }
         try {
-            let result = await fetch(`http://localhost:9000/teacher/${mail}`, {
+            let result = await fetch(`https://bee-final-backend.onrender.com/teacher/${mail}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const DeleteTeacher = () => {
             return;
         }
         try {
-            const result = await fetch(`http://localhost:9000/teacher/${mail}/${password}`, {
+            const result = await fetch(`https://bee-final-backend.onrender.com/teacher/${mail}/${password}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

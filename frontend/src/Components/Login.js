@@ -13,7 +13,7 @@
 
 //     try {
 //       // Simulate login process
-//       const response = await fetch("http://localhost:9000/login", {
+//       const response = await fetch("https://bee-final-backend.onrender.com/login", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const Login = ({ onLogin }) => {
 
     try {
       // API call to login endpoint
-      const response = await fetch(`${process.env.REACT_APP_API_URL || "http://localhost:9000"}/login`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || "https://bee-final-backend.onrender.com"}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

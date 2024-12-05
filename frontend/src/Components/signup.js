@@ -12,7 +12,7 @@
 
 //     try {
 //       // Perform the signup logic (e.g., sending data to the backend)
-//       const response = await fetch('http://localhost:9000/signup', {
+//       const response = await fetch('https://bee-final-backend.onrender.com/signup', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ username, password }),
@@ -85,7 +85,7 @@ const Signup = () => {
 
   const handleGenerateOtp = async () => {
     try {
-      const response = await fetch('http://localhost:9000/signup', {
+      const response = await fetch('https://bee-final-backend.onrender.com/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: email }), // Send email as username
@@ -109,7 +109,7 @@ const Signup = () => {
     e.preventDefault(); // Prevent form refresh
 
     try {
-      const response = await fetch('http://localhost:9000/verify-signup-otp', {
+      const response = await fetch('https://bee-final-backend.onrender.com/verify-signup-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: email, otp }),
@@ -118,7 +118,7 @@ const Signup = () => {
 
       if (response.ok) {
         // On successful verification, save user data
-        const signupResponse = await fetch('http://localhost:9000/signup/verify', {
+        const signupResponse = await fetch('https://bee-final-backend.onrender.com/signup/verify', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: email, password }),

@@ -36,7 +36,7 @@ const AddTeacher = () => {
             return;
             }
 
-            let result = await fetch('http://localhost:9000/teacher', {
+            let result = await fetch('https://bee-final-backend.onrender.com/teacher', {
                 method: 'POST',
                 body: formData,
                 headers: {

@@ -205,7 +205,7 @@ app.post("/reset-password-request", (req, res) => {
     from: 'gulatimanya16@gmail.com',
     to: email,
     subject: "Password Reset Request",
-    text: `Click the following link to reset your password: http://localhost:9000/reset-password/${resetToken}`,
+    text: `Click the following link to reset your password: https://bee-final-backend.onrender.com/reset-password/${resetToken}`,
   }).then(() => {
     req.app.locals[`${email}-reset-token`] = resetToken;
     res.status(200).json({ message: "Password reset email sent successfully" });
@@ -255,7 +255,7 @@ app.post("/teacher", ensureJSONFile(teachersFilePath), authenticateToken, upload
       age,
       department,
       address,
-      image: req.file ? `http://localhost:9000/uploads/${req.file.filename}` : null,
+      image: req.file ? `https://bee-final-backend.onrender.com/uploads/${req.file.filename}` : null,
     });
     await newTeacher.save();
     res.status(201).json({ message: "Teacher added successfully", teacher: newTeacher });
@@ -305,7 +305,7 @@ app.put("/teacher/:mail", ensureJSONFile(teachersFilePath), authenticateToken, u
     teacherData.department = department || teacherData.department;
     teacherData.address = address || teacherData.address;
     if (req.file) {
-      teacherData.image = `http://localhost:9000/uploads/${req.file.filename}`;
+      teacherData.image = `https://bee-final-backend.onrender.com/uploads/${req.file.filename}`;
     }
     await teacherData.save();
     res.status(200).json({ message: "Teacher updated successfully", teacher: teacherData });
